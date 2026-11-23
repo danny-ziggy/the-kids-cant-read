@@ -2,14 +2,12 @@ import sys, json, pathlib, asyncio
 from playwright.async_api import async_playwright
 from PIL import Image
 ROOT=pathlib.Path(__file__).resolve().parent.parent; D=ROOT; FS=ROOT/'tools'/'node_modules'
-FONTS={'anton':FS/'@fontsource/anton/files/anton-latin-400-normal.woff2',
-'news':FS/'@fontsource-variable/newsreader/files/newsreader-latin-opsz-normal.woff2',
-'newsi':FS/'@fontsource-variable/newsreader/files/newsreader-latin-opsz-italic.woff2',
-'mono':FS/'@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2'}
-CSS='''@font-face{font-family:'Anton';src:url(https://fonts.gstatic.com/l/anton.woff2) format('woff2');font-weight:400}
-@font-face{font-family:'Newsreader';src:url(https://fonts.gstatic.com/l/news.woff2) format('woff2');font-weight:200 800;font-style:normal}
-@font-face{font-family:'Newsreader';src:url(https://fonts.gstatic.com/l/newsi.woff2) format('woff2');font-weight:200 800;font-style:italic}
-@font-face{font-family:'JetBrains Mono';src:url(https://fonts.gstatic.com/l/mono.woff2) format('woff2');font-weight:100 800}'''
+FONTS={'arch':FS/'@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2',
+'atk':FS/'@fontsource-variable/atkinson-hyperlegible-next/files/atkinson-hyperlegible-next-latin-wght-normal.woff2',
+'atki':FS/'@fontsource-variable/atkinson-hyperlegible-next/files/atkinson-hyperlegible-next-latin-wght-italic.woff2'}
+CSS='''@font-face{font-family:'Archivo';src:url(https://fonts.gstatic.com/l/arch.woff2) format('woff2');font-weight:100 900;font-stretch:62% 125%}
+@font-face{font-family:'Atkinson Hyperlegible Next';src:url(https://fonts.gstatic.com/l/atk.woff2) format('woff2');font-weight:200 800;font-style:normal}
+@font-face{font-family:'Atkinson Hyperlegible Next';src:url(https://fonts.gstatic.com/l/atki.woff2) format('woff2');font-weight:200 800;font-style:italic}'''
 async def handle(route):
     u=route.request.url
     if 'fonts.googleapis.com' in u: return await route.fulfill(status=200,content_type='text/css',body=CSS)
@@ -41,9 +39,9 @@ async def main():
                 if s.get('js2'):
                     await pg.evaluate(s['js2']); await pg.wait_for_timeout(400)
                 (D/'shots').mkdir(exist_ok=True); f=D/'shots'/f"{tag}-{s['n']}.png"; await pg.screenshot(path=str(f)); files.append(f)
-            for h in ['#','#act-1','#act-2','#act-3']:
+            for h in ['#','#act-1','#act-2','#act-3','#act-4']:
                 await pg.evaluate("h=>{location.hash=h}",h); await pg.wait_for_timeout(400)
-                ow=await pg.evaluate("()=>{const o=[];document.querySelectorAll('.view.on *').forEach(e=>{const r=e.getBoundingClientRect();if(r.right>innerWidth+1&&r.width>0&&!e.closest('.tl-track,.chap-art,svg,.wave'))o.push(e.tagName+'.'+e.className+' '+Math.round(r.right))});return [document.documentElement.scrollWidth,innerWidth,o.slice(0,6)]}")
+                ow=await pg.evaluate("()=>{const o=[];document.querySelectorAll('.view.on *').forEach(e=>{const r=e.getBoundingClientRect();if(r.right>innerWidth+1&&r.width>0&&!e.closest('.shelf-track,.bleed,svg'))o.push(e.tagName+'.'+e.className+' '+Math.round(r.right))});return [document.documentElement.scrollWidth,innerWidth,o.slice(0,6)]}")
                 print(tag,h,'overflow:',ow)
             print(tag,'errors:',errs[:10])
             await ctx.close()

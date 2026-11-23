@@ -1,6 +1,6 @@
 # The Kids Can't Read
 
-A documentary-style interactive feature about what is actually happening with American kids and reading.
+An illustrated, interactive feature: kids aren't reading. v5 is being built in two parts (see the project brief).
 
 Live preview (GitHub Pages): https://danny-ziggy.github.io/the-kids-cant-read/
 
@@ -15,7 +15,9 @@ Live preview (GitHub Pages): https://danny-ziggy.github.io/the-kids-cant-read/
 python3 build.py
 cd tools && npm install && cd ..            # once: fetches the fonts for screenshots
 python3 tools/shoot.py tools/shots.json 1280,960,720,390
-python3 tools/sheet.py 390 6 0.5 sheet.png 01cold0 02coldmid 03coldend
+python3 tools/sheet.py 390 6 0.5 sheet.png 01title0 02titlemid 03titleend
 python3 tools/test.py
 ```
-Screenshots land in `shots/` (ignored by git). Outside videos (TikTok, news players) are blocked in the screenshot harness and in Claude's artifact preview; test them on the Pages site.
+Screenshots land in `shots/` (ignored by git). No video embeds: the three teachers are still cards with links.
+
+`legacy/v4/` holds the v4 source for reference while Acts II–IV are rebuilt. It is not part of the build.
