@@ -1,1 +1,1 @@
-{"name":"kcr-tools","private":true,"dependencies":{"@fontsource-variable/archivo":"*","@fontsource-variable/atkinson-hyperlegible-next":"*"}}
+{"name":"kcr-tools","private":true,"dependencies":{"@fontsource-variable/archivo":"*","@fontsource-variable/atkinson-hyperlegible-next":"*","@fontsource-variable/newsreader":"^5.3.0"}}

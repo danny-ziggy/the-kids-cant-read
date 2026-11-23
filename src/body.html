@@ -1,12 +1,12 @@
 <a class="skiplink" href="#main">Skip to the story</a>
 <header class="topbar">
-  <a class="mark" href="#top" data-go="top">The Kids Can't Read</a>
+  <a class="mark" href="#top">The Kids Can't Read</a>
   <nav class="spines" aria-label="Sections">
-    <a href="#prologue" data-nav="prologue" style="--c:#C8FF3A;--t:#34105C"><b>P</b><span>Woolf</span></a>
-    <a href="#act-1" data-nav="act-1" style="--c:#2C5BA9;--t:#fff"><b>I</b><span>Left Behind</span></a>
-    <a href="#act-2" data-nav="act-2" style="--c:#E0201B;--t:#fff"><b>II</b><span>Caterpillar</span></a>
-    <a href="#act-3" data-nav="act-3" style="--c:#F2702A;--t:#000"><b>III</b><span>Wayside</span></a>
-    <a href="#act-4" data-nav="act-4" style="--c:#FFD000;--t:#000"><b>IV</b><span>Phonics</span></a>
+    <a href="#start" data-nav="start" style="--c:#D8B98A;--t:#24160A">Start</a>
+    <a href="#cant" data-nav="cant" style="--c:#2C5BA9;--t:#fff">Can't</a>
+    <a href="#dont" data-nav="dont" style="--c:#F6A9C1;--t:#5A0020">Don't</a>
+    <a href="#wont" data-nav="wont" style="--c:#E0201B;--t:#fff">Won't</a>
+    <a href="#hope" data-nav="hope" style="--c:#FFD000;--t:#000">Hope</a>
   </nav>
   <div class="ver" role="group" aria-label="Length">
     <button type="button" data-ver="short" aria-pressed="true">Short</button>
@@ -16,51 +16,166 @@
 <div class="ribbon" aria-hidden="true"><i id="ribbon"></i></div>
 
 <main id="main">
-<!-- ========== OPENING, PROLOGUE, DECODING, COMPREHENSION, HABIT ========== -->
-<div class="view" data-view="landing" data-title="The Kids Can't Read">
 
-  <section class="sc open" id="open" data-sc="open" style="--len:2.4" aria-label="Title">
+<!-- ================= START: the title, the history of reading, the alarms, the teachers ================= -->
+<div class="part" id="start" data-part="start">
+
+  <section class="sc open" id="top" data-sc="open" style="--len:2.2" aria-label="Title">
     <div class="stage">
       <h1 class="gtitle" id="gTitle" aria-label="The Kids Can't Read"></h1>
       <svg class="tail" viewBox="0 0 40 70" aria-hidden="true"><path d="M0 0h40v70L20 52 0 70Z"/></svg>
     </div>
   </section>
 
-  <section class="pg tier" data-pal="night" aria-label="Three teachers">
-    <div class="spine">
-      <p class="l1">In 2025 and 2026, teachers posted videos about students who couldn't read.</p>
-      <p class="l2">News outlets picked them up.</p>
+  <!-- 5,000 years -->
+  <section class="sc yrs" id="history" data-sc="yrs" data-pal="clay" style="--len:2.8" aria-labelledby="h-yrs">
+    <div class="stage">
+      <h2 class="h" id="h-yrs">Writing is about 5,000 years old</h2>
+      <p class="lede">Bookkeepers in the Mesopotamian city of Uruk pressed the first known writing into clay around 3200 B.C. For nearly all the time since, most people could not read.</p>
+      <svg class="yrbar" id="yrbar" role="img" aria-label="A timeline from 3200 B.C. to today. Writing appears around 3200 B.C. and the alphabet about 4,000 years ago. Reliable estimates of how many people could read begin in 1820."></svg>
+      <div class="yrout">
+        <p class="yrnow" id="yrNow" aria-hidden="true">3200 B.C.</p>
+        <p class="yrtxt" id="yrTxt" aria-live="polite">The first known writing</p>
+        <svg class="readers10" id="readers10" viewBox="0 0 520 120" role="img" aria-label="Ten figures. In 1820 about one of them could read; today about nine can."></svg>
+      </div>
+      <p class="srcline">Each figure: 1 in 10 people worldwide. Source: Our World in Data</p>
     </div>
+  </section>
+  <div class="drawer-band" data-pal="clay">
+    <div class="drawer" data-d="yrs">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>Mesopotamian cuneiform, the oldest known writing system, began as a way to track goods. Writing was invented on its own at least four times: in Mesopotamia, Egypt, China and Mesoamerica.</p>
+        <p>The literacy shares come from Our World in Data's world series: about 12% in 1820, just over 20% in 1900, 42% in 1960, 70% in 1983 and 87% today. There are no world estimates before 1820, so the figures stay unlit until then.</p>
+        <p class="srcline">Sources: <a href="https://ourworldindata.org/literacy">Our World in Data</a>, <a href="https://www.weforum.org/stories/2022/09/reading-writing-global-literacy-rate-changed/">World Economic Forum and Statista on the same series</a>, <a href="https://www.discovermagazine.com/how-humans-invented-writing-four-different-times-135"><cite>Discover</cite></a>, <a href="https://www.worldhistory.org/cuneiform/">World History Encyclopedia</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3704307">Dehaene in <cite>Cerebrum</cite></a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the brain borrows -->
+  <section class="sc brain" data-sc="brain" data-pal="night" style="--len:2.6" aria-labelledby="h-brain">
+    <div class="stage">
+      <h2 class="h" id="h-brain">No part of the brain evolved to read</h2>
+      <div class="steps">
+        <p class="lede st on">Writing arrived far too recently for evolution to build the brain a reading region.</p>
+        <p class="lede st">Reading takes over a patch of visual cortex that evolved to recognize objects and faces. The neuroscientist Stanislas Dehaene calls the takeover neuronal recycling.</p>
+        <p class="lede st">Children pick up speech by listening, but many learn to read only when someone teaches them directly which shapes stand for which sounds. Teaching it that way is called phonics.</p>
+      </div>
+      <div class="mrow" id="mrow" aria-hidden="true"></div>
+    </div>
+  </section>
+  <div class="drawer-band" data-pal="night">
+    <div class="drawer" data-d="brain">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>The region is called the visual word form area. In everyone who reads, it sits in about the same spot in the left hemisphere, beside areas that respond to faces and objects. A 2020 study by researchers at MIT, with Dehaene, found that the same part of the visual system in monkeys can already tell real words from strings of random letters, which suggests reading builds on machinery that was there first.</p>
+        <p>“The brain did not evolve for culture,” Dehaene told <cite>Scientific American</cite>, “but culture evolved to be learnable by the brain.” He notes that the alphabet is only about 4,000 years old.</p>
+        <p>G. Reid Lyon, who led reading research at the National Institutes of Health, made the case in a 1998 article titled “Why Reading Is Not a Natural Process.” In speech, the separate sounds inside a word run together and are never consciously heard, so no one gets natural practice noticing them.</p>
+        <p class="srcline">Sources: <a href="https://www.unicog.org/publications/1-s2.0-S1364661311000738-main.pdf">Dehaene and Cohen, 2011</a>, <a href="https://news.mit.edu/brain-recycled-ability-read-0804">MIT News, 2020</a>, <a href="https://www.scientificamerican.com/article/your-brain-on-books/"><cite>Scientific American</cite></a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3704307">Dehaene in <cite>Cerebrum</cite></a>, <a href="https://ascd.org/el/articles/why-reading-is-not-a-natural-process">Lyon, 1998</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambrose -->
+  <section class="pg amb" data-pal="vellum" aria-labelledby="q-amb">
+    <svg class="reader" viewBox="0 0 300 320" aria-hidden="true">
+      <path class="arc" d="M196 86q16 14 0 28" style="opacity:calc(1 - var(--e,1) * 1.1)"/>
+      <path class="arc" d="M214 72q28 28 0 56" style="opacity:calc(1 - var(--e,1) * 1.25)"/>
+      <path class="arc" d="M232 58q40 42 0 84" style="opacity:calc(1 - var(--e,1) * 1.4)"/>
+      <circle class="bd" cx="140" cy="96" r="44"/>
+      <path class="bd" d="M60 320V230q0-80 80-80t80 80v90Z"/>
+      <path class="bk" d="M84 214l56 16 56-16v58l-56 16-56-16Z"/>
+    </svg>
+    <div>
+      <blockquote class="bigq" id="q-amb">“his voice and tongue were at rest”</blockquote>
+      <p class="cap">Augustine, in his <cite>Confessions</cite>, on finding the bishop Ambrose reading silently in Milan in the 380s. Augustine then guessed at reasons.</p>
+    </div>
+  </section>
+
+  <!-- Socrates -->
+  <section class="pg soc auto" data-pal="vellum" aria-labelledby="h-soc">
+    <h2 class="h" id="h-soc">Socrates worried about writing</h2>
+    <div class="pair2">
+      <figure class="jux">
+        <svg viewBox="0 0 260 170" aria-hidden="true"><rect class="sk" x="30" y="20" width="200" height="130" rx="4"/><circle class="sk2" cx="30" cy="85" r="22"/><circle class="sk2" cx="230" cy="85" r="22"/><rect class="ln" x="62" y="48" width="136" height="9"/><rect class="ln" x="62" y="72" width="120" height="9"/><rect class="ln" x="62" y="96" width="132" height="9"/><rect class="ln" x="62" y="120" width="90" height="9"/></svg>
+        <blockquote class="midq">“the show of wisdom without the reality”</blockquote>
+        <figcaption class="cap">What letters would give their readers, Socrates warns in Plato's <cite>Phaedrus</cite>. Plato wrote it down around 370 B.C.</figcaption>
+      </figure>
+      <figure class="jux">
+        <svg viewBox="0 0 260 170" aria-hidden="true"><rect class="sk" x="92" y="4" width="84" height="162" rx="14"/><rect class="ln" x="100" y="18" width="68" height="128" rx="4"/><rect class="sk2" x="108" y="30" width="44" height="18" rx="9"/><rect class="sk2" x="118" y="58" width="42" height="18" rx="9"/><rect class="sk2" x="108" y="86" width="52" height="18" rx="9"/></svg>
+        <p class="midnum">1 in 3</p>
+        <figcaption class="cap">15-year-olds have had AI draft their writing, the OECD's PISA survey found in 2025.</figcaption>
+      </figure>
+    </div>
+    <div class="drawer" data-d="soc">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>In the dialogue, the Egyptian king Thamus tells Theuth, the inventor of letters, that writing “will create forgetfulness in the learners' souls.” The quotations come from Benjamin Jowett's public-domain translations of Plato and, for Augustine, E.B. Pusey's.</p>
+        <p>PISA 2025 also found that about half of 15-year-olds use AI to learn every week, and that using it for writing went with lower reading scores. That is a correlation, not proof that AI caused the drop.</p>
+        <p class="srcline">Sources: <a href="https://www.gutenberg.org/ebooks/1636">Plato, <cite>Phaedrus</cite> (Project Gutenberg)</a>, <a href="https://ccel.org/ccel/augustine/confess.vii.iii.html">Augustine, <cite>Confessions</cite> VI.3</a>, <a href="https://www.oecd.org/en/publications/pisa-2025-results-volume-i_73451bc5-en/full-report">OECD, PISA 2025</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- two centuries of alarms -->
+  <section class="sc pile" data-sc="pile" data-pal="horror" style="--len:2.6" aria-labelledby="h-pile">
+    <div class="stage">
+      <h2 class="h" id="h-pile">Two centuries of alarms</h2>
+      <div class="stack5" id="stack5">
+        <p class="slab" style="--b:#FF6B1A;--r:-1.5deg"><b>Late 1700s</b><span><i>Lesesucht</i>, “reading addiction”</span></p>
+        <p class="slab" style="--b:#FF4FA0;--r:1deg"><b>1955</b><span><cite>Why Johnny Can't Read</cite></span></p>
+        <p class="slab test" style="--b:#fff;--r:-.5deg"><b>1971</b><span>First national reading test</span></p>
+        <p class="slab" style="--b:#C8FF3A;--r:1.5deg"><b>1983</b><span><cite>A Nation at Risk</cite></span></p>
+        <p class="slab" style="--b:#FF6B1A;--r:-1deg"><b>2025–26</b><span>Teachers' videos</span></p>
+      </div>
+      <p class="turn" id="pileTurn">Only the newest alarm comes with half a century of national test scores to check it against.</p>
+    </div>
+  </section>
+  <div class="drawer-band" data-pal="horror">
+    <div class="drawer" data-d="pile">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>In the second half of the 1700s, German writers argued over young people's appetite for novels, which critics called <i>Lesesucht</i>: an addiction, a fever or a mania. The historian Henning Wrage calls the debate the first important argument about media harming the young in modern times. Rudolf Flesch's <cite>Why Johnny Can't Read</cite> made the case for phonics in 1955. <cite>A Nation at Risk</cite>, a federal report, warned of “a rising tide of mediocrity” in 1983.</p>
+        <p>The National Assessment of Educational Progress, known as the Nation's Report Card, first tested reading in 1971. Its long-term trend test has used largely the same kinds of questions since.</p>
+        <p class="srcline">Sources: <a href="https://mon.uwpress.org/content/102/1/1">Wrage, <cite>Monatshefte</cite></a>, <a href="https://www.historytoday.com/node/53718"><cite>History Today</cite></a>, <a href="https://nces.ed.gov/nationsreportcard/ltt/interpreting_results.aspx">NCES</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the teachers -->
+  <section class="pg tier" data-pal="night" aria-labelledby="h-tier">
+    <h2 class="h" id="h-tier">The teachers</h2>
+    <p class="lede" style="margin-top:.5em">In 2025 and 2026, teachers posted videos saying many of their students couldn't read, and millions of people watched.</p>
     <div class="panels">
       <article class="tcard" style="--i:0">
-        <svg class="phone" viewBox="0 0 120 200" aria-hidden="true"><rect x="4" y="4" width="112" height="192" rx="18"/><rect class="scr" x="14" y="22" width="92" height="150" rx="6"/><circle class="hd" cx="60" cy="88" r="20"/><path class="hd" d="M26 172v-30q0-30 34-30t34 30v30Z"/></svg>
-        <div class="tbody">
+        <svg class="phone" viewBox="0 0 120 200" aria-hidden="true"><rect x="4" y="4" width="112" height="192" rx="18"/><rect class="scr" x="14" y="22" width="92" height="150" rx="6"/><circle cx="60" cy="88" r="20"/><path d="M26 172v-30q0-30 34-30t34 30v30Z"/></svg>
+        <div>
           <p class="big"><b>2</b> of about 110</p>
-          <p class="cap">students at grade level, by her count</p>
+          <p class="cap">eighth graders at grade level, by her count</p>
           <h3>Ms. L</h3>
-          <p>8th-grade history, Dallas. December 2025.</p>
+          <p>History teacher, Dallas. December 2025.</p>
           <blockquote>“It's scaring me a little.”</blockquote>
-          <a class="go" href="https://www.tiktok.com/@heymisscanigetapencil/video/7579812040152288567" target="_blank" rel="noopener">Watch on TikTok</a>
+          <a class="go" href="https://dailydot.com/news/8th-grade-teacher-2-out-of-110-students-can-read/" target="_blank" rel="noopener">Daily Dot coverage</a>
         </div>
       </article>
       <article class="tcard" style="--i:1">
-        <svg class="phone" viewBox="0 0 120 200" aria-hidden="true"><rect x="4" y="4" width="112" height="192" rx="18"/><rect class="scr" x="14" y="22" width="92" height="150" rx="6"/><circle class="hd" cx="60" cy="88" r="20"/><path class="hd" d="M26 172v-30q0-30 34-30t34 30v30Z"/></svg>
-        <div class="tbody">
+        <svg class="phone" viewBox="0 0 120 200" aria-hidden="true"><rect x="4" y="4" width="112" height="192" rx="18"/><rect class="scr" x="14" y="22" width="92" height="150" rx="6"/><circle cx="60" cy="88" r="20"/><path d="M26 172v-30q0-30 34-30t34 30v30Z"/></svg>
+        <div>
           <blockquote class="bq">“I have seniors who simply cannot read, and seniors who cannot write.”</blockquote>
           <h3>Darius Williams</h3>
           <p>Career and technical education, Wheatley High School, Houston. August 2026.</p>
-          <p>Students disputed his account. The district pointed to the school's first A rating.</p>
+          <p>Students at the school disputed his account, and the district pointed to Wheatley's first A rating.</p>
           <a class="go" href="https://www.fox26houston.com/news/houston-teacher-students-read-write-2026-seniors" target="_blank" rel="noopener">FOX 26 coverage</a>
         </div>
       </article>
       <article class="tcard" style="--i:2">
-        <svg class="phone" viewBox="0 0 120 200" aria-hidden="true"><rect x="4" y="4" width="112" height="192" rx="18"/><rect class="scr" x="14" y="22" width="92" height="150" rx="6"/><circle class="hd" cx="60" cy="88" r="20"/><path class="hd" d="M26 172v-30q0-30 34-30t34 30v30Z"/></svg>
-        <div class="tbody">
+        <svg class="phone" viewBox="0 0 120 200" aria-hidden="true"><rect x="4" y="4" width="112" height="192" rx="18"/><rect class="scr" x="14" y="22" width="92" height="150" rx="6"/><circle cx="60" cy="88" r="20"/><path d="M26 172v-30q0-30 34-30t34 30v30Z"/></svg>
+        <div>
           <p class="big">Millions</p>
           <p class="cap">of views</p>
           <h3>Hannah</h3>
           <p>10th-grade English. May 2025.</p>
-          <p>She left after three years of teaching. She blamed read-aloud tools, social media and ChatGPT.</p>
+          <p>She quit after three years and blamed read-aloud tools, social media and ChatGPT.</p>
           <a class="go" href="https://www.foxnews.com/media/teacher-goes-viral-after-saying-tech-ruining-kids-education-farewell-video" target="_blank" rel="noopener">Fox News coverage</a>
         </div>
       </article>
@@ -68,317 +183,166 @@
     <div class="drawer" data-d="teachers">
       <button class="more" type="button" aria-expanded="false">Show more</button>
       <div class="dbody" hidden>
-        <p>Ms. L's numbers are her own count of her students: 2 of about 110 at grade level, 18 at a kindergarten level and 55 at a second- to fourth-grade level.</p>
-        <p>Darius Williams's assignment was two paragraphs to read and one sentence to write. Students at the school disputed his account to local public radio. Asked about the video, Superintendent Mike Miles began with a question: “Is that new information?” Wheatley had received its seventh consecutive failing rating in 2019, which led to state intervention in 2023.</p>
-        <p>Reported view counts for Hannah's video differed: over 1 million in one report, about 7 million in another.</p>
-        <p>A WJLA fact check found most kids weren't illiterate in the strict sense, but most lacked standard comprehension skills.</p>
-        <p class="src">Sources: <a href="https://dailydot.com/news/8th-grade-teacher-2-out-of-110-students-can-read/">Daily Dot</a>, <a href="https://www.upworthy.com/a-distraught-teacher-went-viral-because-his-students-couldnt-read/">Upworthy</a>, <a href="https://www.ktvu.com/news/houston-isd-superintendent-teachers-video-response">KTVU</a>, <a href="https://www.fox4news.com/news/teacher-quits-profession-viral-rant-how-ai-is-ruining-education">FOX 4</a>, <a href="https://moneywise.com/employment/this-young-us-teacher-just-quit-with-a-serious-warning-to-america-says-kids-cant-even-read-and-shes-lost-faith-in-some-of-them-heres-the-1-thing-crippling-her-classroom">Moneywise</a>, <a href="https://wjla.com/news/nation-world/fact-check-team-do-americas-kids-really-not-know-how-to-read-literacy-rates-education-comprehension-skills-national-assesment-educational-progress-tiktok-viral-students-classroom-teacher-shortages-economy-taxpayers-workforce-development-report-card">WJLA</a>.</p>
+        <p>Ms. L's numbers are her own count: 2 of about 110 students at grade level, 18 at a kindergarten level and 55 at a second- to fourth-grade level.</p>
+        <p>Williams's assignment was two paragraphs to read and one sentence to write. Students disputed his account to local public radio. Asked about the video, Houston's superintendent, Mike Miles, began with a question: “Is that new information?” Wheatley had received its seventh straight failing rating in 2019, which led to state intervention in 2023.</p>
+        <p>Reports of Hannah's views ranged from more than 1 million to about 7 million. She later apologized.</p>
+        <p>A WJLA fact check found that most children are not illiterate in the strict sense, but that most lack standard comprehension skills.</p>
+        <p class="srcline">Sources: <a href="https://dailydot.com/news/8th-grade-teacher-2-out-of-110-students-can-read/">Daily Dot</a>, <a href="https://www.aol.com/news/teacher-shocked-students-lack-basic-110000274.html">AOL</a>, <a href="https://www.upworthy.com/a-distraught-teacher-went-viral-because-his-students-couldnt-read/">Upworthy</a>, <a href="https://www.ktvu.com/news/houston-isd-superintendent-teachers-video-response">KTVU</a>, <a href="https://www.fox4news.com/news/teacher-quits-profession-viral-rant-how-ai-is-ruining-education">FOX 4</a>, <a href="https://moneywise.com/employment/this-young-us-teacher-just-quit-with-a-serious-warning-to-america-says-kids-cant-even-read-and-shes-lost-faith-in-some-of-them-heres-the-1-thing-crippling-her-classroom">Moneywise</a>, <a href="https://wjla.com/news/nation-world/fact-check-team-do-americas-kids-really-not-know-how-to-read-literacy-rates-education-comprehension-skills-national-assesment-educational-progress-tiktok-viral-students-classroom-teacher-shortages-economy-taxpayers-workforce-development-report-card">WJLA</a>.</p>
       </div>
     </div>
   </section>
 
+  <!-- the thesis -->
   <section class="pg splash" data-pal="thesis" id="thesis" aria-label="Thesis">
-    <h2 class="thesis" id="thesisLine"><span>Kids</span> <span>aren't</span> <span>reading.</span></h2>
+    <h2 class="thesis"><span>Kids</span> <span>aren't</span> <span>reading.</span></h2>
   </section>
-
-  <section class="sc duo-sc" data-sc="cant" data-pal="thesis" style="--len:2" aria-label="The weakest readers">
-    <div class="stage">
-      <p class="hl">The weakest readers can't.</p>
-      <svg class="art" id="shelf100" aria-hidden="true"></svg>
-      <div><p class="num"><b>40</b></p>
-      <p class="cap">of every 100 fourth graders scored below Basic in reading in 2024.</p></div>
-    </div>
+  <section class="pg auto" data-pal="thesis" aria-label="The argument in three words">
+    <dl class="words">
+      <div><dt>Can't</dt><dd>The weakest readers can't read well, and they have fallen further behind.</dd></div>
+      <div><dt>Don't</dt><dd>Nearly everyone reads less for fun than a generation ago, adults included.</dd></div>
+      <div><dt>Won't</dt><dd>The people with the power to fix it have reasons not to.</dd></div>
+    </dl>
   </section>
-
-  <section class="sc duo-sc" data-sc="fun" data-pal="thesis" style="--len:2.4" aria-label="Reading for fun">
-    <div class="stage">
-      <p class="hl">Reading for fun collapsed.</p>
-      <svg class="art" id="stack" aria-hidden="true"></svg>
-      <div><p class="num"><b id="nFun">35%</b></p>
-      <p class="cap">of 13-year-olds read for fun almost every day in <span id="yFun">1984</span>.</p><p class="cap rm-only">In 1984 it was 35%.</p></div>
-    </div>
-  </section>
-
-  <section class="pg pair" data-pal="thesis" aria-label="Two more numbers">
-    <div class="duo">
-      <p class="num sm"><b>22%</b><i aria-hidden="true"></i><b>31%</b></p>
-      <p class="cap">of 13-year-olds never or hardly ever read for fun, 2012 and 2023.</p>
-    </div>
-    <div class="duo">
-      <p class="num sm"><b>53%</b><i aria-hidden="true"></i><b>37%</b></p>
-      <p class="cap">of 9-year-olds read for fun almost every day, 2012 and 2025.</p>
-    </div>
-    <div class="drawer" data-d="thesis">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <p>Fourth-grade figures come from the National Assessment of Educational Progress, the Nation's Report Card. In 2024, 40% scored below Basic, 29% at Basic and 31% at Proficient or above. The 40% was the most since 2002 and not significantly different from 1992.</p>
-        <p>Reading-for-fun figures come from NAEP's Long-Term Trend survey. Daily reading for fun among 13-year-olds was 27% in 2012 and 17% in 2020.</p>
-        <p class="src">Sources: <a href="https://nationsreportcard.gov/reports/reading/2024/g4_8/">NAEP 2024</a>, <a href="https://www.arts.gov/stories/blog/2024/federal-data-reading-pleasure-all-signs-show-slump">NEA</a>, <a href="https://blog.csba.org/naep-long-term-trends/">CSBA on the 2025 results</a>, <a href="https://njsba.org/?p=96740">NJSBA</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROLOGUE -->
-  <section class="cover" id="chap-prologue" data-pal="horror" aria-label="Prologue: The Boy Who Cried Woolf">
-    <p class="thline">Kids aren't reading.</p>
-    <div class="cv">
-      <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true">
-        <g class="books"><rect x="0" y="40" width="70" height="220"/><rect x="76" y="20" width="58" height="240"/><rect x="266" y="30" width="62" height="230"/><rect x="334" y="56" width="66" height="204"/></g>
-        <g class="wolf"><path d="M150 260V120l22-58 22 46h12l22-46 22 58v140Z"/><path class="eye" d="M164 150l18 8-18 6Z"/><path class="eye" d="M236 150l-18 8 18 6Z"/></g>
-      </svg>
-      <p class="series">Prologue</p>
-      <h2 class="cv-t">The Boy Who Cried Woolf</h2>
-    </div>
-  </section>
-
-  <section class="sc shelf" data-sc="shelf" data-pal="horror" style="--len:3.2" aria-label="Two centuries of alarms">
-    <div class="stage">
-      <div class="spine">
-        <p class="l1">For more than two centuries, adults raised alarms about young people and reading.</p>
-        <p class="l2">Until 1971, no national test tracked whether they were right.</p>
-      </div>
-      <div class="shelf-track" id="shelfTrack">
-        <div class="pb" style="--b:#FF6B1A"><b>1790s</b><span>Germany worried about “reading mania”</span></div>
-        <div class="pb" style="--b:#C8FF3A"><b>1955</b><span><cite>Why Johnny Can't Read</cite></span></div>
-        <div class="pb mark71" style="--b:#fff"><b>1971</b><span>NAEP's first reading test</span></div>
-        <div class="pb" style="--b:#FF4FA0"><b>1983</b><span><cite>A Nation at Risk</cite></span></div>
-        <div class="pb" style="--b:#FF6B1A"><b>2024</b><span>Professors said students struggled with whole books</span></div>
-        <div class="pb" style="--b:#C8FF3A"><b>2025</b><span>Teachers' videos</span></div>
-        <div class="pb" style="--b:#FF4FA0"><b>2026</b><span>The lowest U.S. score on PISA in about 25 years</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sc chart13" data-sc="ltt" data-pal="horror" style="--len:2" aria-label="Age 13 reading scores, 1971 to 2025">
-    <div class="stage">
-      <div class="spine">
-        <p class="l1">Thirteen-year-olds' average reading score peaked in 2012.</p>
-        <p class="l2">By 2025 it was 256. In 1971 it had been 255.</p>
-      </div>
-      <svg class="ltt" id="ltt" role="img" aria-label="Line chart. Average reading score at age 13: 255 in 1971, a peak of 263 in 2012, 256 in 2025."></svg>
-    </div>
-  </section>
-  <div class="drawer-band" data-pal="horror">
-    <div class="drawer" data-d="ltt">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <p>Scores are on NAEP's 0–500 scale; the chart shows 250 to 265.</p>
-        <p>Germany's “Lesesucht,” or reading mania, was a 1790s worry about too much novel reading. Rudolf Flesch's <cite>Why Johnny Can't Read</cite> came out in 1955. <cite>A Nation at Risk</cite> warned of “a rising tide of mediocrity” in 1983. PISA's 2025 results, released in September 2026, put the U.S. reading score at 490, the lowest in about 25 years; the U.S. sample missed participation standards.</p>
-        <p class="src">Sources: <a href="https://nagb.gov/news-and-events/news-releases/2023/new-data-on-pandemic-era-learning.html">NAGB</a>, <a href="https://blog.csba.org/naep-long-term-trends/">CSBA</a>, <a href="https://www.chalkbeat.org/2026/06/10/new-naep-scores-show-older-students-struggling-in-reading-and-math/">Chalkbeat</a>, <a href="https://www.edweek.org/leadership/reading-ability-craters-on-international-exam-both-in-the-united-states-and-abroad/2026/09">Education Week on PISA</a>, <a href="https://moglen.law.columbia.edu/LCS/horowitch-reading.html">The Atlantic</a>. Years between 1975 and 2008 come from NAEP's published series.</p>
-      </div>
-    </div>
-  </div>
-
-  <section class="pg woolf" data-pal="horror" aria-label="Virginia Woolf">
-    <svg class="chair" viewBox="0 0 300 300" aria-hidden="true">
-      <path class="c" d="M40 300V150q0-60 60-60h100q60 0 60 60v150h-30v-60H70v60Z"/>
-      <circle class="r" cx="150" cy="96" r="30"/>
-      <path class="r" d="M104 240v-70q0-36 46-36t46 36v70Z"/>
-      <path class="bk" d="M112 176l38 10 38-10v34l-38 10-38-10Z"/>
-    </svg>
-    <div class="spine">
-      <p class="l1">In 1925, Virginia Woolf called a book of her essays <cite>The Common Reader</cite>. She meant someone who read for pleasure.</p>
-      <p class="l2">A year later she gave a talk at a girls' school in Kent. It was called “How Should One Read a Book?”</p>
-    </div>
-    <p class="coda"><b>14</b> of every 100 thirteen-year-olds read for fun almost every day in 2025.</p>
-    <div class="drawer" data-d="woolf">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <p>Woolf took the title from Samuel Johnson's <cite>Life of Gray</cite>. Her common reader read “for his own pleasure,” not to teach or to correct anyone. The 1926 talk was published that year in <cite>The Yale Review</cite> and, revised, closed her second <cite>Common Reader</cite> in 1932.</p>
-        <p class="src">Sources: <a href="https://www.gutenberg.org/ebooks/64457">The Common Reader (Project Gutenberg)</a>, <a href="https://www.britannica.com/topic/The-Common-Reader">Britannica</a>, <a href="https://smith.edu/libraries/libs/rarebook/exhibitions/penandpress/case9b.htm">Smith College</a>, <a href="https://yalereview.org/article/how-should-one-read-book-0">The Yale Review</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DECODING -->
-  <section class="pg early" data-pal="early" id="decode" aria-label="Decoding">
-    <h2 class="skill">Decoding</h2>
-    <div class="spine">
-      <p class="l1">A child who hadn't learned the code read every word like this.</p>
-    </div>
-    <div class="dec" id="dec">
-      <div class="dword" id="dWord" aria-hidden="true"></div>
-      <div class="slots" id="dSlots" role="group" aria-label="The word, one letter per box"></div>
-      <div class="key" id="dKey" aria-label="Key"></div>
-      <button class="btn ghost" id="dShow" type="button">Show</button>
-    </div>
-    <div class="drawer" data-d="theo">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <div class="ph"><p class="tag">Placeholder</p><p>Theo, 9, knew “the” and “and” by sight. Everything else took work. If he said the first sound with confidence, a grown-up often finished the word. By the bottom of the page the story had gotten away from him.</p><p class="tag">A composite. Interview to come: a parent or reading specialist.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPREHENSION -->
-  <section class="pg idiom" data-pal="idiom" id="infer" aria-label="Comprehension">
-    <h2 class="skill">Comprehension</h2>
-    <svg class="lines" viewBox="0 0 600 220" aria-hidden="true">
-      <rect x="0" y="10" width="560" height="34"/><rect x="0" y="94" width="600" height="34"/><rect x="0" y="178" width="420" height="34"/>
-      <g class="peek"><circle cx="300" cy="62" r="14"/><path d="M276 94v-12q0-14 24-14t24 14v12Z"/></g>
-      <g class="peek p2"><circle cx="470" cy="146" r="14"/><path d="M446 178v-12q0-14 24-14t24 14v12Z"/></g>
-    </svg>
-    <div class="spine">
-      <p class="l1">Every word in this passage was easy. The answer was never written down.</p>
-    </div>
-    <div class="quiz" id="mara">
-      <p class="tag">Sample passage written for this page</p>
-      <div class="passage">
-        <p>Mara's violin case had sat by the front door all week. She practiced every night, even the night of the storm, when the power went out and she played by flashlight.</p>
-        <p>On Saturday her teacher pinned the audition list to the music-room wall. Mara <mark>read it twice</mark>. When she got home, she <mark>slid the case under her bed</mark> and <mark>asked if anyone wanted to watch a movie</mark>.</p>
-      </div>
-      <p class="q">Why did Mara put the case under her bed?</p>
-      <div class="opts">
-        <button class="opt" type="button"><b>A</b>To keep it safe in case of another storm</button>
-        <button class="opt" type="button" data-ok><b>B</b>She didn't get a spot in the audition</button>
-        <button class="opt" type="button"><b>C</b>Her teacher told her to stop practicing</button>
-        <button class="opt" type="button"><b>D</b>She planned to practice after the movie</button>
-      </div>
-    </div>
-    <div class="drawer" data-d="nora">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <div class="ph"><p class="tag">Placeholder</p><p>Nora, 13, could read the passage aloud without a stumble. Asked why Mara hid the case, she said, “It doesn't say.”</p><p class="tag">A composite. Interview to come: a middle-school teacher or tutor.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE HABIT -->
-  <section class="sc romance" data-sc="romance" data-pal="romance" style="--len:2" aria-label="The habit">
-    <div class="stage">
-      <h2 class="skill">The habit</h2>
-      <svg class="morph" id="morph" viewBox="0 0 400 300" aria-hidden="true">
-        <rect class="bk-r" x="200" y="40" width="150" height="220" rx="4"/>
-        <rect class="bk-l" x="50" y="40" width="150" height="220" rx="4"/>
-        <rect class="glow" x="214" y="64" width="122" height="170" rx="6"/>
-      </svg>
-      <div class="spine">
-        <p class="l1">In 2004, 28 of every 100 American adults read for pleasure on a given day.</p>
-        <p class="l2">In 2023, 16 did.</p>
-      </div>
-    </div>
-  </section>
-  <div class="drawer-band" data-pal="romance">
-    <div class="drawer" data-d="jess">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <p>The figures come from the American Time Use Survey, analyzed in <cite>iScience</cite> in 2025. People who still read spent slightly more time doing it.</p>
-        <div class="ph"><p class="tag">Placeholder</p><p>Jess, 19, got through high school on excerpts and summaries. She had never read a novel cover to cover.</p><p class="tag">A composite. Interview to come: a college student.</p></div>
-        <p class="src">Source: <a href="https://news.ufl.edu/2025/08/reading-for-pleasure-study/">University of Florida and UCL</a>.</p>
-      </div>
-    </div>
-  </div>
-
-  <nav class="next" aria-label="Next"><a href="#act-1" data-pal="picture"><span class="n">Next</span><b>I</b><span class="t">Most Children Left Behind</span></a></nav>
 </div>
 
-<!-- ========== ACT I ========== -->
-<div class="view" data-view="act-1" data-title="Most Children Left Behind · The Kids Can't Read">
-  <section class="cover" data-pal="picture" aria-label="Act I: Most Children Left Behind">
-    <p class="thline">Kids aren't reading.</p>
-    <div class="cv">
-      <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true">
-        <path class="tape" d="M0 236h400v14H0Z"/>
-        <g class="kids" id="cvKids"></g>
-        <path class="tape" d="M300 196l26 26M326 196l-26 26" stroke-width="9"/>
-      </svg>
-      <p class="series">I</p>
-      <h2 class="cv-t">Most Children Left Behind</h2>
-    </div>
+<!-- ================= CAN'T ================= -->
+<div class="part" id="cant" data-part="cant">
+  <section class="cover" data-pal="picture" aria-labelledby="h-cant">
+    <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true">
+      <path class="tape" d="M0 236h400v14H0Z"/>
+      <g class="kids" id="cvKids"></g>
+      <path class="tape" d="M24 196l26 26M50 196l-26 26" stroke-width="9"/>
+    </svg>
+    <h2 class="cv-t" id="h-cant">Can't</h2>
+    <p class="kick">How real is it?</p>
   </section>
 
-  <section class="pg photo" data-pal="picture" aria-label="A class of 100 fourth graders">
-    <div class="spine">
-      <p class="l1">No Child Left Behind became law in January 2002.</p>
-      <p class="l2">In 2024, 40 of every 100 fourth graders scored below Basic in reading, the most since 2002.</p>
-    </div>
-    <figure class="risers" id="risers" aria-label="100 fourth graders, 40 highlighted"></figure>
-    <div class="yc">
-      <div class="years" role="group" aria-label="Year">
-        <button type="button" data-y="2019" aria-pressed="false">2019</button>
-        <button type="button" data-y="2022" aria-pressed="false">2022</button>
-        <button type="button" data-y="2024" aria-pressed="true">2024</button>
-      </div>
-      <p class="count"><b id="rCount">40</b> of 100</p>
-    </div>
-    <div class="drawer" data-d="class">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <p>Below Basic: 34% in 2019, 37% in 2022, 40% in 2024. Proficient or above: 35%, 33%, 31%.</p>
-        <p>Below Basic did not mean a child couldn't read at all, Chalkbeat noted. The National Center for Education Statistics advised reading NAEP's achievement levels with caution.</p>
-        <p>The share at Advanced was higher than in 1992. In 2024, 77% of fourth graders from the wealthiest families scored above the national average.</p>
-        <p class="src">Sources: <a href="https://nationsreportcard.gov/reports/reading/2024/g4_8/">NAEP 2024</a>, <a href="https://www.nagb.gov/news-and-events/news-releases/2025/nations-report-card-decline-in-reading-progress-in-math.html">NAGB</a>, <a href="https://www.npr.org/2025/01/29/nx-s1-5270880/math-reading-covid-naep">NPR</a>, <a href="https://chalkbeat.org/2025/01/29/naep-reading-scores-decline-and-struggling-students-fall-behind">Chalkbeat</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="pg means" data-pal="picture" aria-label="What below Basic meant">
-    <p class="say">Below Basic meant a fourth grader likely couldn't recognize the reason behind a character's action when the story only implied it.</p>
-    <p class="src">Source: <a href="https://www.nagb.gov/news-and-events/news-releases/2025/nations-report-card-decline-in-reading-progress-in-math.html">National Assessment Governing Board</a></p>
-  </section>
-
-  <section class="pg line" data-pal="picture" id="lineLeader" aria-label="Line Leader">
-    <h2 class="scene-t">Line Leader</h2>
-    <div class="spine">
-      <p class="l1">In 2024, the strongest 12th-grade readers scored about where they had in 1992.</p>
-      <p class="l2">The weakest scored 24 points lower.</p>
-    </div>
-    <svg class="queue" id="queue" role="img" aria-label="100 twelfth graders in a line from weakest to strongest reader. From 1992 to 2024 the weakest end sank 24 points; the strongest end held."></svg>
-    <div class="ctrl">
-      <button class="btn" id="qPlay" type="button">Play</button>
-      <div class="yr" id="qYr" aria-live="polite">1992</div>
-    </div>
-    <div class="pins" role="group" aria-label="Place the marker">
-      <button type="button" data-p="10">10th</button><button type="button" data-p="25">25th</button><button type="button" data-p="50" aria-pressed="true">50th</button><button type="button" data-p="75">75th</button><button type="button" data-p="90">90th</button>
-    </div>
-    <div class="drawer" data-d="line">
-      <button class="more" type="button" aria-expanded="false">Show more</button>
-      <div class="dbody" hidden>
-        <p>Change in 12th-grade reading scores from 1992 to 2024, by percentile: 10th, 24 points lower; 25th, 15 lower; 50th, 8 lower; 75th, 2 lower; 90th, no significant change. The 2024 average was the lowest ever reported, 10 points below 1992.</p>
-        <p>The line of 100 is drawn from those five measured points; positions between them are interpolated. The marker stops only at measured points.</p>
-        <p>College-ready in reading: 35% of seniors in 2024, 37% in 2019. In 2024, 31% of seniors missed three or more days of school in the past month, up from 26% in 2019.</p>
-        <p class="src">Sources: <a href="https://www.nationsreportcard.gov/reports/reading/2024/g12/national-trends/">NAEP grade 12</a>, <a href="https://www.nagb.gov/naep/reading.html">NAGB</a>, <a href="https://www.aol.com/articles/us-student-scores-hit-lows-210153404.html">AP via AOL</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="sc life" data-sc="life" data-pal="picture" style="--len:5" aria-label="Across a life">
+  <!-- the split -->
+  <section class="sc split" id="split" data-sc="split" data-land=".9" data-pal="chalk" style="--len:3.6" aria-labelledby="h-split">
     <div class="stage">
-      <svg class="grow" id="grow" viewBox="0 0 200 320" aria-hidden="true"></svg>
-      <div class="lstat">
-        <p class="age" id="lAge"></p>
-        <p class="lbig" id="lBig"></p>
-        <p class="ltxt" id="lTxt"></p>
+      <h2 class="h" id="h-split">Fifty years of 13-year-olds</h2>
+      <div class="steps">
+        <p class="lede st on">Since 1971, the federal government has tested 13-year-olds' reading on a scale of 0 to 500. The average has barely moved.</p>
+        <p class="lede st">At 256, the average 13-year-old can connect ideas and draw general conclusions from short passages about science, history or literature.</p>
+        <p class="lede st">The average hides a widening gap. The strongest 13-year-olds now outscore their 1971 counterparts, while the weakest do no better and have lost the most ground since 2012.</p>
       </div>
-      <ol class="ticks" id="lTicks" aria-hidden="true"></ol>
+      <svg class="chart" id="c13" role="img" aria-label="Line chart of reading scores for 13-year-olds, 1971 to 2025, on a 0 to 500 scale. The average stays near 256. The strongest tenth rose from 300 in 1971 to 305 in 2023; the weakest tenth fell from 208 to 202."></svg>
+      <div class="foot"><p class="srcline">Source: NAEP Long-Term Trend, NCES</p><button class="share" type="button" data-share="split">Copy link</button></div>
     </div>
-    <ol class="steps" id="lSteps"></ol>
   </section>
-  <div class="drawer-band" data-pal="picture">
-    <div class="drawer" data-d="life">
+  <div class="drawer-band" data-pal="chalk">
+    <div class="drawer" data-d="split">
       <button class="more" type="button" aria-expanded="false">Show more</button>
       <div class="dbody" hidden>
-        <p>The graduation figure comes from a study of about 4,000 students: 16% of those not reading proficiently by the end of third grade didn't graduate on time, against 4% of proficient readers. With poverty added, it was 26%. Adult literacy figures come from the OECD's survey of adult skills; many of the young adults at the lowest levels had high-school diplomas. The health finding is an association from a 2011 federal review. The $2.2 trillion figure is a model estimate.</p>
-        <div class="ph"><p class="tag">Placeholder</p><p>At 9, Jamie tracked the line with her finger and turned the page when the kid next to her did. At 13 she read the first paragraph, the last paragraph and the questions. She graduated a year late. At 22 a friend read her the emails that mattered.</p><p class="tag">A composite. Interview to come: an adult who learned to read late.</p></div>
-        <p class="src">Sources: <a href="https://nationsreportcard.gov/reports/reading/2024/g4_8/">NAEP 2024</a>, <a href="https://www.aecf.org/blog/poverty-puts-struggling-readers-in-double-jeopardy-minorities-most-at-risk">Annie E. Casey Foundation</a>, <a href="https://www.the74million.org/article/many-young-adults-barely-literate-yet-earned-a-high-school-diploma">The 74 on PIAAC</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/21768583/">Berkman et al. (AHRQ)</a>, <a href="https://www.barbarabush.org/?p=1659">Gallup for the Barbara Bush Foundation</a>.</p>
+        <p>The long-term trend test gave 13-year-olds an average of 255 in 1971, a peak of 263 in 2012 and 256 in both 2023 and 2025. In 2004 the test's format changed; the chart uses the revised score, 257.</p>
+        <p>The score bands come from the test's own descriptions. At 200, students can understand, combine ideas and make inferences from short, uncomplicated passages. At 250, they can search for specific information, connect ideas and generalize about literature, science and social studies. At 300, they can find, understand, summarize and explain relatively complicated material.</p>
+        <p>The strongest and weakest tenths are the 90th and 10th percentiles. The lines show every published value from 1971 to 1996, then 2020 and 2023; the dashed stretch skips years not plotted here. In 2023 the 10th percentile scored 202, below its 1971 score of 208, and the commissioner of the National Center for Education Statistics, Peggy Carr, said so. From 2012 to 2020, the 10th percentile was the only group whose score changed significantly. In 2025, neither end changed significantly from 2023, and only the highest scorers remained significantly above 1971.</p>
+        <p class="srcline">Sources: <a href="https://www.nationsreportcard.gov/ltt/2025/supporting-files/2025_technical_and_results_appendix_ltt.pdf">NCES, 2025 appendix</a>, <a href="https://nces.ed.gov/programs/digest/d97/d97t108.asp">NCES Digest, 1997</a>, <a href="https://prnewswire.com/news-releases/no-green-shoots-of-academic-recovery-as-202223-mathematics-reading-scores-of-13-year-olds-decline-301855926.html">NCES release, 2023</a>, <a href="https://prnewswire.com/news-releases/13-year-olds-reading-and-math-scores-decline-since-2012-9-year-olds-scores-did-not-change-301399251.html">NCES release, 2021</a>, <a href="https://nces.ed.gov/programs/digest/d16/tables/dt16_221.90.asp">NCES score-level descriptions</a>, <a href="https://blog.csba.org/naep-long-term-trends/">CSBA on 2025</a>.</p>
       </div>
     </div>
   </div>
 
-  <section class="pg plan" data-pal="picture" id="plan" aria-label="Two health plans">
-    <div class="spine">
-      <p class="l1">Adults at the lowest literacy level could handle short, clearly marked text.</p>
-      <p class="l2">They struggled when the facts were spread across a longer text.</p>
+  <!-- seniors -->
+  <section class="sc seniors" id="seniors" data-sc="seniors" data-land=".95" data-pal="picture" style="--len:2.6" aria-labelledby="h-sen">
+    <div class="stage">
+      <h2 class="h" id="h-sen">Seniors, 1992 to 2024</h2>
+      <p class="lede">Among high-school seniors, the weakest readers scored 24 points lower in 2024 than in 1992, while the strongest scored about the same.</p>
+      <svg class="queue" id="queue" role="img" aria-label="A line of high-school seniors from weakest to strongest reader. From 1992 to 2024 the weakest end sank 24 points while the strongest end held."></svg>
+      <div class="foot"><p class="srcline">Source: NAEP grade 12 reading</p><button class="share" type="button" data-share="seniors">Copy link</button></div>
     </div>
+  </section>
+  <div class="drawer-band" data-pal="picture">
+    <div class="drawer" data-d="seniors">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>Change in 12th-grade reading scores from 1992 to 2024, by percentile: 10th, 24 points lower; 25th, 15 lower; 50th, 8 lower; 75th, 2 lower; 90th, no significant change. The 2024 average was the lowest since the test began in 1992. Positions between the five measured points are drawn by interpolation.</p>
+        <p>In 2024, 35% of seniors scored at the level the test's board considers ready for college reading, down from 37% in 2019. Thirty-one percent had missed three or more days of school in the past month, up from 26%.</p>
+        <p class="srcline">Sources: <a href="https://www.nationsreportcard.gov/reports/reading/2024/g12/national-trends/">NAEP grade 12</a>, <a href="https://www.nagb.gov/naep/reading.html">NAGB</a>, <a href="https://www.aol.com/articles/us-student-scores-hit-lows-210153404.html">Associated Press via AOL</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the decoder -->
+  <section class="pg early auto" id="decoder" data-pal="early" aria-labelledby="h-dec">
+    <p class="kick">What does it look like?</p>
+    <h2 class="h" id="h-dec">Sounding it out</h2>
+    <p class="lede" style="margin-top:.45em">In this invented alphabet, each shape stands for a sound, the way letters do for a child just learning them.</p>
+    <div class="dec" id="dec">
+      <div class="dtop">
+        <svg class="dpic" id="dPic" viewBox="0 0 200 140" aria-hidden="true">
+          <circle class="sun" cx="170" cy="24" r="14"/>
+          <rect class="gd" x="0" y="112" width="200" height="28"/>
+          <path class="sh" d="M118 112V70l30-26 30 26v42Z"/><rect class="k" x="140" y="86" width="16" height="26"/>
+          <path class="k" d="M38 112V82a12 12 0 0 1 24 0v30Z"/><circle class="k" cx="50" cy="58" r="11"/>
+          <rect class="bk" x="58" y="80" width="18" height="13" rx="2"/>
+          <path class="dg" d="M76 112v-14h24v14h-5v-8h-14v8Z"/><circle class="dg" cx="103" cy="95" r="6"/>
+        </svg>
+        <div class="helper" id="dHelp">
+          <svg viewBox="0 0 44 64" aria-hidden="true"><circle cx="22" cy="12" r="10"/><path d="M4 64V38q0-16 18-16t18 16v26Z"/></svg>
+          <button class="bub" id="dBub" type="button" aria-label="The helper's guess"></button>
+        </div>
+      </div>
+      <div class="dline" id="dLine" role="group" aria-label="A sentence in the invented alphabet"></div>
+      <p class="dplain" id="dPlain" aria-live="polite"></p>
+      <div class="dkey" id="dKey" role="group" aria-label="Key: shapes and their sounds"></div>
+      <div class="drow"><button class="btn ghost" id="dShow" type="button">Show</button><button class="share" type="button" data-share="decoder">Copy link</button></div>
+    </div>
+    <div class="prose" style="margin-top:clamp(24px,4vh,44px)"><p>Fluent readers know most words on sight, which leaves their attention free for meaning. A reader still sounding out every word spends it on the sounds, and the start of a sentence slips away before the end arrives.</p></div>
+    <div class="drawer" data-d="decoder">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>The helper's habit has a name. Three-cueing taught children to work out a word from the picture, the sentence and the first letter instead of sounding it out. In a 2019 Education Week survey, about three in four teachers of kindergarten through second grade said they used it. At least 14 states now bar it.</p>
+        <p>Two shapes in the key stand for two letters at once, “sh” and “oo,” because each spells a single sound. Phonics teaches those pairs directly.</p>
+        <div class="ph full-only"><p class="tag">Placeholder</p><p>Theo, 9, knew “the” and “and” by sight. Everything else took work. If he said the first sound with confidence, a grown-up often finished the word. By the bottom of the page the story had gotten away from him.</p><p class="tag">A composite. Interview to come: a parent or reading specialist.</p></div>
+        <p class="srcline">Sources: <a href="https://www.edweek.org/teaching-learning/more-states-are-taking-aim-at-a-controversial-early-reading-method/2025/04">Education Week, 2025</a>, <a href="https://www.edweek.org/teaching-learning/federal-science-of-reading-legislation-passes-the-house/2026/09">Education Week, 2026</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- grades and scores -->
+  <section class="pg grades auto" id="grades" data-pal="report" aria-labelledby="h-gr">
+    <p class="kick">What happens as they move up?</p>
+    <h2 class="h" id="h-gr">Grades rise as scores fall</h2>
+    <p class="lede" style="margin-top:.45em">From 2015 to 2024, the average GPA of high-school graduates who took the ACT rose from 3.23 to 3.43, while their average ACT score fell from 21.0 to 19.5.</p>
+    <svg class="gchart" id="gChart" role="img" aria-label="Two lines, 2015 to 2024. Average GPA rises from 3.23 to 3.43. Average ACT score falls from 21.0 to 19.5."></svg>
+    <div class="foot"><p class="srcline">Source: ACT Research Report R2514, July 2026. Grades are self-reported.</p><button class="share" type="button" data-share="grades">Copy link</button></div>
+    <p class="lede" style="margin-top:clamp(36px,7vh,80px)">Most parents judge how their children are doing by the report card.</p>
+    <div class="vs">
+      <div><p class="mega">88%</p><p class="cap">of parents said in 2023 that their child read at or above grade level</p></div>
+      <div><p class="mega">37%</p><p class="cap">of fourth graders scored below the national test's Basic level in 2022</p></div>
+    </div>
+    <div class="drawer" data-d="grades">
+      <button class="more" type="button" aria-expanded="false">Show more</button>
+      <div class="dbody" hidden>
+        <p>ACT's figures cover graduating classes that took its test. In 2024, 42% of them did not report a GPA, and the number of test takers fell from 2.09 million in 2017 to 1.39 million in 2024, so the group changed over time. ACT sells tests and argues for test requirements. A federal study of real transcripts found the same direction: average GPA rose from 3.00 in 2009 to 3.11 in 2019 while 12th-grade national test scores did not improve.</p>
+        <p>The parent figures come from a Gallup survey for the nonprofit Learning Heroes of about 2,000 public-school parents. Seventy-nine percent said their child got mostly B's or better, and 64% called report cards an important measure. The two numbers above describe different groups of children; they are shown together, not as one measure.</p>
+        <p class="srcline">Sources: <a href="https://www.act.org/content/dam/act/unsecured/documents/r2514-high-school-grade-inflation-and-academically-discrepant-college-readiness-indicators-2026-07.pdf">ACT, 2026</a>, <a href="https://hechingerreport.org/proof-points-new-evidence-of-high-school-grade-inflation">Hechinger Report on the transcript study</a>, <a href="https://news.gallup.com/opinion/gallup/513947/parents-ask-questions-child-receives.aspx">Gallup</a>, <a href="https://bealearninghero.org/wp-content/uploads/2023/11/Learning-Heroes-Gallup-research_fact-sheet-1.pdf">Learning Heroes</a>, <a href="https://nationsreportcard.gov/reports/reading/2024/g4_8/">NAEP 2024</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- adults -->
+  <section class="pg adults auto" data-pal="night" aria-labelledby="h-ad">
+    <h2 class="h" id="h-ad">Graduating anyway</h2>
+    <p class="lede" style="margin-top:.45em">In 2023, a quarter of Americans ages 16 to 24 scored at the lowest adult literacy levels, up from 16% in 2017, and many of them had finished high school.</p>
+    <svg class="grid100" id="grid100" role="img" aria-label="100 figures. 16 are highlighted for 2017 and 9 more for 2023, making 25."></svg>
+    <div class="legend"><span><i style="--c:var(--pencil)"></i>2017: 16 in 100</span><span><i style="--c:#fff"></i>2023: 9 more, 25 in all</span></div>
+    <p class="srcline" style="margin-top:14px">Source: OECD Survey of Adult Skills, via NCES and <cite>The 74</cite></p>
+  </section>
+
+  <!-- the health plans -->
+  <section class="pg plan auto" id="plan" data-pal="page" aria-labelledby="h-plan">
+    <h2 class="h" id="h-plan">The fine print</h2>
+    <p class="lede" style="margin-top:.45em">Adults at those levels can read short texts with clearly marked facts but struggle when the facts are spread across a longer one.</p>
     <div class="quiz form" id="planQ">
       <p class="tag">Sample task written for this page</p>
-      <p class="lead">Jamie saw a specialist about six times a year.</p>
+      <p class="lead">Jamie sees a specialist about six times a year.</p>
       <div class="plans">
         <div class="pl"><b>Plan A</b><span>$150 a month</span><span>Specialist visit: $60</span></div>
-        <div class="pl"><b>Plan B</b><span>$110 a month</span><span>Specialist visit: $20<sup>*</sup></span></div>
+        <div class="pl"><b>Plan B</b><span>$110 a month</span><span>Specialist visit: $20 *</span></div>
       </div>
-      <p class="fine" id="fine"><sup>*</sup> After the $1,500 annual deductible. Until then, each specialist visit costs $200.</p>
-      <p class="q">Which plan cost Jamie less that year?</p>
+      <p class="fine" id="fine">* After the $1,500 annual deductible. Until then, each specialist visit costs $200.</p>
+      <p class="q">Which plan costs Jamie less in a year?</p>
       <div class="opts two">
         <button class="opt" type="button" data-ok><b>A</b>Plan A</button>
         <button class="opt" type="button"><b>B</b>Plan B</button>
@@ -391,57 +355,47 @@
     <div class="drawer" data-d="plan">
       <button class="more" type="button" aria-expanded="false">Show more</button>
       <div class="dbody" hidden>
-        <p>Plan A: 12 × $150 + 6 × $60 = $2,160. Plan B: 12 × $110 + 6 × $200 = $2,520. Six visits at $200 came to $1,200, under the $1,500 deductible, so the $20 price never applied.</p>
-        <p>At Level 1 or below, the OECD's lowest levels, adults could read short texts and lists with clearly marked information. Comparing sources or finding information spread across a longer text was where they struggled. The U.S. share at that level rose from 19% in 2017 to 28% in 2023.</p>
-        <p class="src">Sources: <a href="https://www.oecd.org/en/topics/sub-issues/adult-literacy-skills.html">OECD</a>, <a href="https://ies.ed.gov/learn/press-release/u-s-adults-score-par-international-average-literacy-skills-below-international-average-numeracy-and">NCES</a>.</p>
+        <p>Plan A: 12 × $150 + 6 × $60 = $2,160. Plan B: 12 × $110 + 6 × $200 = $2,520. Six visits at $200 come to $1,200, under the $1,500 deductible, so the $20 price never applies.</p>
+        <p>The OECD's lowest levels, Level 1 and below, describe adults who can read short texts and lists with clearly marked information but struggle to compare sources or find facts spread across a longer text. The U.S. share of adults at those levels rose from 19% in 2017 to 28% in 2023. Low health literacy goes with more hospital stays and more emergency care, a 2011 federal review found.</p>
+        <div class="ph full-only"><p class="tag">Placeholder</p><p>At 9, Jamie tracked the line with her finger and turned the page when the kid next to her did. At 13 she read the first paragraph, the last paragraph and the questions. She graduated a year late. At 22 a friend read her the emails that mattered.</p><p class="tag">A composite. Interview to come: an adult who learned to read late.</p></div>
+        <p class="srcline">Sources: <a href="https://www.oecd.org/en/topics/sub-issues/adult-literacy-skills.html">OECD</a>, <a href="https://ies.ed.gov/learn/press-release/u-s-adults-score-par-international-average-literacy-skills-below-international-average-numeracy-and">NCES</a>, <a href="https://www.the74million.org/article/many-young-adults-barely-literate-yet-earned-a-high-school-diploma"><cite>The 74</cite></a>, <a href="https://pubmed.ncbi.nlm.nih.gov/21768583/">Berkman et al., 2011</a>.</p>
       </div>
     </div>
   </section>
 
-  <section class="pg tbc" data-pal="picture" aria-label="Interview to come">
+  <section class="pg tbc full-only" data-pal="page" aria-label="Interview to come">
     <div class="ph big"><p class="tag">Interview to come</p><p>A teacher of struggling readers.</p></div>
   </section>
 
-  <nav class="next" aria-label="Next"><a href="#act-2" data-pal="days"><span class="n">Next</span><b>II</b><span class="t">The Very Hungry Capitalist-erpillar</span></a></nav>
+  <nav class="next" aria-label="Next"><a href="#dont" data-pal="romance"><span class="n">Next</span><span class="t">Don't</span></a></nav>
 </div>
 
-<!-- ========== ACTS II–IV (built in part B) ========== -->
-<div class="view" data-view="act-2" data-title="The Very Hungry Capitalist-erpillar · The Kids Can't Read">
-  <section class="cover" data-pal="days" aria-label="Act II: The Very Hungry Capitalist-erpillar">
-    <p class="thline">Kids aren't reading.</p>
-    <div class="cv">
-      <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true"><g class="holes"><circle cx="40" cy="200" r="22"/><circle cx="110" cy="170" r="22"/><circle cx="180" cy="140" r="22"/><circle cx="250" cy="110" r="22"/><circle cx="320" cy="80" r="22"/></g></svg>
-      <p class="series">II</p>
-      <h2 class="cv-t">The Very Hungry Capitalist-erpillar</h2>
-    </div>
+<!-- ================= DON'T, WON'T, HOPE (built in Chat 2) ================= -->
+<div class="part" id="dont" data-part="dont">
+  <section class="cover" data-pal="romance" aria-labelledby="h-dont">
+    <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true"><rect x="60" y="30" width="130" height="200" rx="4"/><rect x="210" y="30" width="130" height="200" rx="4"/><rect class="glow" x="224" y="52" width="102" height="156" rx="6"/></svg>
+    <h2 class="cv-t" id="h-dont">Don't</h2>
+    <p class="kick">Why did reading for fun collapse?</p>
   </section>
-  <section class="pg tbc" data-pal="days"><div class="ph big"><p class="tag">Placeholder</p><p>This act is in progress.</p></div></section>
-  <nav class="next" aria-label="Next"><a href="#act-3" data-pal="wayside"><span class="n">Next</span><b>III</b><span class="t">Sideways Stories from Wayside School</span></a></nav>
+  <section class="pg tbc" data-pal="romance"><div class="ph big"><p class="tag">In progress</p><p>Reading for fun, kids and adults: built next.</p></div></section>
 </div>
 
-<div class="view" data-view="act-3" data-title="Wayside · The Kids Can't Read">
-  <section class="cover" data-pal="wayside" aria-label="Act III">
-    <p class="thline">Kids aren't reading.</p>
-    <div class="cv">
-      <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true"><g transform="rotate(-90 200 130)"><rect x="110" y="20" width="180" height="220"/><g class="win"><rect x="130" y="40" width="40" height="34"/><rect x="230" y="40" width="40" height="34"/><rect x="130" y="100" width="40" height="34"/><rect x="230" y="100" width="40" height="34"/><rect x="180" y="180" width="40" height="60"/></g></g></svg>
-      <p class="series">III</p>
-      <h2 class="cv-t">Sideways Stories from Wayside School</h2>
-    </div>
+<div class="part" id="wont" data-part="wont">
+  <section class="cover" data-pal="days" aria-labelledby="h-wont">
+    <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true"><g class="holes"><circle cx="40" cy="200" r="22"/><circle cx="110" cy="170" r="22"/><circle cx="180" cy="140" r="22"/><circle cx="250" cy="110" r="22"/><circle cx="320" cy="80" r="22"/></g></svg>
+    <h2 class="cv-t" id="h-wont">Won't</h2>
+    <p class="kick">Who profits from things as they are?</p>
   </section>
-  <section class="pg tbc" data-pal="wayside"><div class="ph big"><p class="tag">Placeholder</p><p>This act is in progress.</p></div></section>
-  <nav class="next" aria-label="Next"><a href="#act-4" data-pal="phonics"><span class="n">Next</span><b>IV</b><span class="t">Hooked on Phonics</span></a></nav>
+  <section class="pg tbc" data-pal="days"><div class="ph big"><p class="tag">In progress</p><p>The money and the incentives: built next.</p></div></section>
 </div>
 
-<div class="view" data-view="act-4" data-title="Hooked on Phonics · The Kids Can't Read">
-  <section class="cover" data-pal="phonics" aria-label="Act IV: Hooked on Phonics">
-    <p class="thline">Kids aren't reading.</p>
-    <div class="cv">
-      <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true"><g class="cards"><rect x="20" y="60" width="110" height="150" rx="10"/><rect x="145" y="40" width="110" height="150" rx="10"/><rect x="270" y="60" width="110" height="150" rx="10"/></g></svg>
-      <p class="series">IV</p>
-      <h2 class="cv-t">Hooked on Phonics</h2>
-    </div>
+<div class="part" id="hope" data-part="hope">
+  <section class="cover" data-pal="phonics" aria-labelledby="h-hope">
+    <svg class="cv-art" viewBox="0 0 400 260" aria-hidden="true"><g class="cards"><rect x="20" y="60" width="110" height="150" rx="10"/><rect x="145" y="40" width="110" height="150" rx="10"/><rect x="270" y="60" width="110" height="150" rx="10"/></g></svg>
+    <h2 class="cv-t" id="h-hope">Hope</h2>
+    <p class="kick">What works?</p>
   </section>
-  <section class="pg tbc" data-pal="phonics"><div class="ph big"><p class="tag">Placeholder</p><p>This act and the ending are in progress.</p></div></section>
-  <nav class="next" aria-label="Back to the start"><a href="#top" data-go="top" data-pal="page"><span class="n">Back to the start</span><span class="t">The Kids Can't Read</span></a></nav>
+  <section class="pg tbc" data-pal="phonics"><div class="ph big"><p class="tag">In progress</p><p>What works, the ending and the credits: built next.</p></div></section>
 </div>
+
 </main>

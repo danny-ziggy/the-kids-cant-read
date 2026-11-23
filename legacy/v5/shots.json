@@ -1,0 +1,211 @@
+[
+{
+"n": "01title0",
+"route": "#",
+"js": "window.scrollTo(0,0)"
+},
+{
+"n": "02titlemid",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.open')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.4*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 900
+},
+{
+"n": "03titleend",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.open')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.98*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 900
+},
+{
+"n": "04teachers",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.tier')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "05thesis",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('#thesis')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "06cant0",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('[data-sc=cant]')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.02*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 600
+},
+{
+"n": "07cant1",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('[data-sc=cant]')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.95*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 900
+},
+{
+"n": "08fun0",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('[data-sc=fun]')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.02*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 700
+},
+{
+"n": "09fun1",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('[data-sc=fun]')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.95*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 900
+},
+{
+"n": "10pair",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.pair')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "11coverP",
+"route": "#prologue",
+"js": "0",
+"wait": 700
+},
+{
+"n": "12shelf0",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.shelf')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.02*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 600
+},
+{
+"n": "13shelf1",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.shelf')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.9*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 600
+},
+{
+"n": "14ltt",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.chart13')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.95*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 700
+},
+{
+"n": "15woolf",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.woolf')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "16decode",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('#decode')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "17decodeplay",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('#decode')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+(innerHeight*.25))})();(()=>{const i=document.querySelectorAll('#dSlots input');i[0].value='S';i[0].dispatchEvent(new Event('input'));i[1].value='N';i[1].dispatchEvent(new Event('input'));i[2].value='X';i[2].dispatchEvent(new Event('input'))})()",
+"wait": 200
+},
+{
+"n": "18decodedone",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('#decode')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+(innerHeight*.25))})();document.getElementById('dShow').click()",
+"wait": 1400
+},
+{
+"n": "19infer",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('#infer')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "20infersolved",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('#mara')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+-40)})();document.querySelector('#mara [data-ok]').click()",
+"wait": 1500
+},
+{
+"n": "21habit0",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.romance')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.02*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 600
+},
+{
+"n": "22habit1",
+"route": "#",
+"js": "(()=>{const e=document.querySelectorAll('.romance')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.97*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 600
+},
+{
+"n": "23next",
+"route": "#",
+"js": "window.scrollTo(0,document.documentElement.scrollHeight)",
+"wait": 600
+},
+{
+"n": "24cover1",
+"route": "#act-1",
+"js": "0",
+"wait": 700
+},
+{
+"n": "25photo",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('.photo')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "26means",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('.means')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 600
+},
+{
+"n": "27line",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('#lineLeader')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})()",
+"wait": 2600
+},
+{
+"n": "28life0",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('.life')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.05*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 700
+},
+{
+"n": "29life3",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('.life')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.6*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 900
+},
+{
+"n": "30life5",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('.life')[0];const st=e.querySelector('.stage');window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0.98*(e.offsetHeight-st.offsetHeight))})()",
+"wait": 900
+},
+{
+"n": "31plan",
+"route": "#act-1",
+"js": "(()=>{const e=document.querySelectorAll('#plan')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+0)})();document.querySelector('#planQ [data-ok]').click()",
+"wait": 1500
+},
+{
+"n": "32cover2",
+"route": "#act-2",
+"js": "0",
+"wait": 700
+},
+{
+"n": "33cover3",
+"route": "#act-3",
+"js": "0",
+"wait": 700
+},
+{
+"n": "34cover4",
+"route": "#act-4",
+"js": "0",
+"wait": 700
+},
+{
+"n": "35full",
+"route": "#",
+"js": "document.querySelector('[data-ver=full]').click();(()=>{const e=document.querySelectorAll('.tier')[0];window.scrollTo(0,e.getBoundingClientRect().top+scrollY-document.querySelector('.topbar').offsetHeight+(innerHeight*.5))})()",
+"wait": 700
+}
+]
